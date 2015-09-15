@@ -71,8 +71,7 @@ sub new {
               }
         }
     };
-    my $self = $class->SUPER::new($options);
-    return $self;
+    return $class->SUPER::new($options);
 }
 
 sub _encode_ltsv {
