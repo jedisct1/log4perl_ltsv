@@ -28,12 +28,13 @@ Log4perl implementation of LTSV.
 =head1 Configuration Sample
     use Log::Log4perl
     my $logger_conf = {
-      'log4perl.logger.test'              => 'DEBUG, SERVER',
-      'log4perl.appender.SERVER'          => 'Log::Log4perl::Appender::Socket',
-      'log4perl.appender.SERVER.PeerAddr' => '10.1.2.3',
-      'log4perl.appender.SERVER.PeerPort' => '514',
-      'log4perl.appender.SERVER.Proto'    => 'tcp',
-      'log4perl.appender.SERVER.layout'   => 'LTSV'
+      'log4perl.logger.test'                     => 'DEBUG, SERVER',
+      'log4perl.appender.SERVER'                 => 'Log::Log4perl::Appender::Socket',
+      'log4perl.appender.SERVER.PeerAddr'        => '10.1.2.3',
+      'log4perl.appender.SERVER.PeerPort'        => '514',
+      'log4perl.appender.SERVER.Proto'           => 'tcp',
+      'log4perl.appender.SERVER.layout'          => 'LTSV',
+      'log4perl.appender.SERVER.layout.facility' => 'Custom facility'
     };
     Log::Log4perl->init($logger_conf);
     my $LOGGER = Log::Log4perl->get_logger('test');
@@ -61,6 +62,9 @@ sub new {
         'line'     => '%L',
         'pid'      => '%P',
     };
+    if (defined $options->{facility}->{value}) {
+        $record->{'facility'} = $options->{facility}->{value};
+    }
     my $conversion_pattern = _encode_ltsv($record);
     $options->{ConversionPattern} = { value => $conversion_pattern };
     $options->{cspec} = {
