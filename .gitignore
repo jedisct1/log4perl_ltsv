@@ -1,6 +1,7 @@
 !Build/
 *.bs
 *.o
+*.tar.gz
 *~
 .last_cover_stats
 /.build/
