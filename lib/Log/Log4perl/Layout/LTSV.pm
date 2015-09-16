@@ -112,6 +112,6 @@ sub _level_converter {
 sub render {
     my ( $self, $message, $category, $priority, $caller_level ) = @_;
     return $self->SUPER::render( $message, $category, $priority,
-        $caller_level );
+        $caller_level ) . "\n";
 }
 1;
