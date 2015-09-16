@@ -3,8 +3,6 @@ package Log::Log4perl::Layout::LTSV;
 ##################################################
 
 use 5.008_001;
-use 5.8.1;
-use v5.8.1;
 use strict;
 use warnings;
 use Encode;
