@@ -62,8 +62,8 @@ sub new {
         'line'     => '%L',
         'pid'      => '%P',
     };
-    if (defined $options->{facility}->{value}) {
-        $record->{'facility'} = $options->{facility}->{value};
+    while( my($key) = each %{$options->{field}} ){
+        $record->{$key} = $options->{field}->{$key}->{value};
     }
     my $conversion_pattern = _encode_ltsv($record);
     $options->{ConversionPattern} = { value => $conversion_pattern };
