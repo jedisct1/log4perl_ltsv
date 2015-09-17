@@ -3,14 +3,14 @@ require 5.008001;
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-  'NAME' => 'Log::Log4perl::Layout::LTSV',
   'EXE_FILES' => [],
-  'VERSION_FROM' => 'lib/Log/Log4perl/Layout/LTSV.pm',
   'PREREQ_PM' => {
-                   'Log::Log4perl' => '1.20',
-                   'Test::More' => 0
+                   'Test::More' => 0,
+                   'Log::Log4perl' => '1.20'
                  },
-  'PL_FILES' => {},
-  'INSTALLDIRS' => 'site'
+  'INSTALLDIRS' => 'site',
+  'VERSION_FROM' => 'lib/Log/Log4perl/Layout/LTSV.pm',
+  'NAME' => 'Log::Log4perl::Layout::LTSV',
+  'PL_FILES' => {}
 )
 ;

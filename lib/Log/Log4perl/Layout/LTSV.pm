@@ -1,6 +1,4 @@
-##################################################
 package Log::Log4perl::Layout::LTSV;
-##################################################
 
 use 5.008_001;
 use strict;
@@ -17,13 +15,16 @@ Log::Log4perl::Layout::LTSV - Log4perl for LTSV
 
 =head1 VERSION
 Version 1.0
+
 =cut
 
 our $VERSION = '1.0';
 
 =head1 SYNOPSIS
 Log4perl implementation of LTSV.
+
 =head1 Configuration Sample
+
     use Log::Log4perl
     my $logger_conf = {
       'log4perl.logger.test'                     => 'DEBUG, SERVER',
@@ -38,12 +39,14 @@ Log4perl implementation of LTSV.
     my $LOGGER = Log::Log4perl->get_logger('test');
     $LOGGER->debug('Debug log');
     ...
+
 =cut
 
 =head1 SUBROUTINES/METHODS
 
-=head2 new    
+=head2 new
     Can take most of options that Log::Log4perl::Layout::PatternLayout can.
+
 =cut
 
 sub new {
@@ -103,8 +106,9 @@ sub _level_converter {
     return $levels->{$priority};
 }
 
-=head2 render    
-    Wraps the Log::Log4perl::Layout::PatternLayout return value   
+=head2 render
+    Wraps the Log::Log4perl::Layout::PatternLayout return value
+
 =cut
 
 sub render {
