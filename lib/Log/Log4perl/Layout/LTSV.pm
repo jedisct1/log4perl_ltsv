@@ -60,7 +60,7 @@ sub new {
         'line'     => '%L',
         'pid'      => '%P',
     };
-    while( my($key) = each %{$options->{field}} ){
+    while ( my ($key) = each %{ $options->{field} } ) {
         $record->{$key} = $options->{field}->{$key}->{value};
     }
     my $conversion_pattern = _encode_ltsv($record);
@@ -109,7 +109,7 @@ sub _level_converter {
 
 sub render {
     my ( $self, $message, $category, $priority, $caller_level ) = @_;
-    return $self->SUPER::render( $message, $category, $priority,
-        $caller_level ) . "\n";
+    return $self->SUPER::render( $message, $category, $priority, $caller_level )
+      . "\n";
 }
 1;
