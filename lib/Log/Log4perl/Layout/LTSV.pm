@@ -11,9 +11,11 @@ use base qw(Log::Log4perl::Layout::PatternLayout);
 $Log::Log4perl::ALLOW_CODE_IN_CONFIG_FILE = 1;
 
 =head1 NAME
+
 Log::Log4perl::Layout::LTSV - Log4perl for LTSV
 
 =head1 VERSION
+
 Version 1.0
 
 =cut
@@ -21,9 +23,10 @@ Version 1.0
 our $VERSION = '1.0';
 
 =head1 SYNOPSIS
+
 Log4perl implementation of LTSV.
 
-=head1 Configuration Sample
+=head1 CONFIGURATION SAMPLE
 
     use Log::Log4perl
     my $logger_conf = {
@@ -45,6 +48,7 @@ Log4perl implementation of LTSV.
 =head1 SUBROUTINES/METHODS
 
 =head2 new
+
     Can take most of options that Log::Log4perl::Layout::PatternLayout can.
 
 =cut
@@ -107,6 +111,7 @@ sub _level_converter {
 }
 
 =head2 render
+
     Wraps the Log::Log4perl::Layout::PatternLayout return value
 
 =cut

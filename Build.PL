@@ -8,7 +8,7 @@ my $builder = Module::Build
            configure_requires => { 'Module::Build' => 0.30 },
            create_makefile_pl => 'traditional',
            dist_author => 'Frank Denis <jedi @ cpan dot org>',
-           dist_version => '1.003',
+           dist_version => '1.004',
            dist_abstract => q[A Log4perl layout that spits out LTSV],
            license => 'mit',
            requires => { 'perl' => '5.8.1',
