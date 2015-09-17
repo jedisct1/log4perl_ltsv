@@ -3,7 +3,14 @@ Log::Log4perl::Layout::LTSV
 
 A Log4perl layout that spits out [LTSV](http://ltsv.org/).
 
-Usage:
+Installation
+------------
+
+    $ cpanm Log::Log4perl::Layout::LTSV
+
+Usage
+-----
+
 ```perl
 use Log::Log4perl;
 use Log::Log4perl::Layout::LTSV;
