@@ -7,7 +7,7 @@ my $builder = Module::Build
     ->new( module_name => 'Log::Log4perl::Layout::LTSV',
            configure_requires => { 'Module::Build' => 0.30 },
            create_makefile_pl => 'traditional',
-           dist_author => 'Frank Denis <perl at pureftpd dot org>',
+           dist_author => 'Frank Denis <jedi @ cpan dot org>',
            dist_version => '1.000_001',
            dist_abstract => q[A Log4perl layout that spits out LTSV],
            license => 'mit',
