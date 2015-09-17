@@ -79,7 +79,7 @@ sub new {
 sub _encode_ltsv {
     my $hash = shift;
     my @res;
-    while ( my ( $key, my $value ) = each %$hash ) {
+    while ( my ($key, $value) = each %$hash ) {
         $value =~ s/[\r\n\t]/ /g;
         if ( not Encode::is_utf8( $value, 1 ) ) {
             $value = Encode::encode( 'UTF-8', $value, Encode::FB_CROAK );
