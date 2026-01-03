@@ -16,11 +16,11 @@ Log::Log4perl::Layout::LTSV - Log4perl for LTSV
 
 =head1 VERSION
 
-Version 1.0
+Version 1.004
 
 =cut
 
-our $VERSION = '1.0';
+our $VERSION = '1.004';
 
 =head1 SYNOPSIS
 
@@ -28,7 +28,7 @@ Log4perl implementation of LTSV.
 
 =head1 CONFIGURATION SAMPLE
 
-    use Log::Log4perl
+    use Log::Log4perl;
     my $logger_conf = {
       'log4perl.logger.test'                     => 'DEBUG, SERVER',
       'log4perl.appender.SERVER'                 => 'Log::Log4perl::Appender::Socket',
